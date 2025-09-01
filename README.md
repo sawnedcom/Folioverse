@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Folioverse – Professional Portfolio & Resume Template
 
-## Getting Started
+**Folioverse** is a modern, high-performance portfolio and resume template built with Next.js 15, Tailwind CSS v4, and TypeScript. Designed for developers, designers, and creative professionals, Folioverse helps you showcase your skills, projects, and experience with a stunning online presence.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- Next.js 15 (App Router) – Fast, SEO-friendly, and scalable.
+- Tailwind CSS v4 – Rapid UI development with utility-first CSS.
+- TypeScript – Reliable, maintainable code.
+- Responsive Design – Looks great on all devices.
+- Dark/Light Mode – Built-in theme switcher.
+- Dynamic Project Pages – Each project gets a unique, auto-generated page.
+- Functional Contact Form – Easily connect with external email services.
+- SEO Ready – Includes sitemap.xml and robots.txt.
+- Easy Customization – Update content and add projects with simple edits.
+
+---
+
+## 📁 Project Structure
+
+```
+/
+├── public/                 # Static files (images, PDFs)
+│   ├── image/              # Project & hero images
+│   └── resume.pdf          # Resume in PDF format
+├── src/
+│   ├── app/                # Next.js App Router pages
+│   │   ├── about/          # /about page
+│   │   ├── projects/       # /projects (list & detail pages)
+│   │   ├── contact/        # /contact page
+│   │   ├── resume/         # /resume page
+│   │   ├── layout.tsx      # Layout (Navbar & Footer)
+│   │   ├── page.tsx        # Homepage (Hero Section)
+│   │   └── globals.css     # Global styles
+│   ├── components/         # Reusable components
+│   ├── fixtures/           # Demo project data
+│   └── types/              # TypeScript interfaces
+├── .gitignore
+├── package.json
+├── tsconfig.json
+├── next.config.ts
+├── postcss.config.mjs
+├── eslint.config.mjs
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ How to Use After Purchase
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- Node.js (LTS version recommended)
+- npm (comes with Node.js)
 
-To learn more about Next.js, take a look at the following resources:
+### Installation Steps
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Extract the ZIP file**  
+   Unzip the purchased package to your preferred folder.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install Dependencies**  
+   Open your terminal in the project folder and run:
 
-## Deploy on Vercel
+   ```
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Start Development Server**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```
+   npm run dev
+   ```
+
+   Your site will be available at [http://localhost:3000](http://localhost:3000).
+
+4. **Build for Production**  
+   When ready to deploy, run:
+   ```
+   npm run build
+   npm start
+   ```
+
+---
+
+## 🎨 Customization Guide
+
+### 1. Update Page Content
+
+Edit text directly inside these files:
+
+- Homepage → `src/app/page.tsx`
+- About Page → `src/app/about/page.tsx`
+- Contact Page → `src/app/contact/page.tsx`
+- Resume Page → `src/app/resume/page.tsx`
+
+### 2. Add & Manage Projects
+
+All project data is stored in `src/fixtures/projects.ts`.
+
+Add a new project object that matches the `Project` type in `src/types/index.ts`:
+
+```ts
+{
+  id: 'unique-id-5',
+  title: 'My Awesome New Project',
+  description: 'A brief description of my project.',
+  image: '/image/my-project-image.png',
+  slug: 'awesome-new-project',
+  tags: [
+    { id: 't-next', name: 'Next.js' },
+    { id: 't-tw', name: 'Tailwind' }
+  ],
+}
+```
+
+Images should be placed inside the `public/image/` folder.
+
+### 3. Resume PDF
+
+Export your resume as `resume.pdf` and place it inside the `public/` folder.  
+The "Download Resume" button on `/resume` will automatically serve this file.
+If you have pdf about your resume, put it on public folder :).
+### 4. Theming & Colors
+
+Default colors are configured in `tailwind.config.ts`.  
+Advanced theming can be achieved with CSS variables.
+
+---
+
+## 📜 License & Usage
+
+This template is licensed for commercial use by the purchaser.  
+Redistribution or resale is not permitted.
+
+---
+
+## 💡 Final Note
+
+With Folioverse, you get more than a portfolio template — you get a personal branding platform that looks professional, performs fast, and helps you stand out to clients and recruiters.
+
+---
